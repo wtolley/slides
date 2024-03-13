@@ -1,3 +1,9 @@
+<!-- .slide: data-background="#E6F7FF" -->
+
+# Markdown Slides <!-- .element: class="r-fit-text" -->
+
+Quickly write & host beautiful markdown-based slides <!-- .element: class="r-fit-text" -->
+
 <section data-transition="none">
 
 ## Coding
