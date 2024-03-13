@@ -5,16 +5,16 @@
 ## Coding
 
 ```assembly[1-2]
-    1149:       f3 0f 1e fa             endbr64
-    114d:       48 83 ec 08             sub    rsp,0x8
-    1151:       ba 01 00 00 00          mov    edx,0x1
-    1156:       48 8d 35 a7 0e 00 00    lea    rsi,[rip+0xea7]        # 2004 <_IO_stdin_used+0x4>
-    115d:       bf 01 00 00 00          mov    edi,0x1
-    1162:       b8 00 00 00 00          mov    eax,0x0
-    1167:       e8 e4 fe ff ff          call   1050 <__printf_chk@plt>
-    116c:       b8 00 00 00 00          mov    eax,0x0
-    1171:       48 83 c4 08             add    rsp,0x8
-    1175:       c3                      retimport dataclasses
+endbr64
+sub    rsp,0x8
+mov    edx,0x1
+lea    rsi,[rip+0xea7]        # 2004 <_IO_stdin_used+0x4>
+mov    edi,0x1
+mov    eax,0x0
+call   1050 <__printf_chk@plt>
+mov    eax,0x0
+add    rsp,0x8
+ret
 
 ```
 
