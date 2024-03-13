@@ -1,6 +1,6 @@
 # Basic config, that must be set correctly
 baseurl: /slides
-githuburl: https://wtolley.github.io
+githuburl: https://wtolley.github.io/slides
 # Further config
 markdown_slide_separator: ---
 permalink: "/:title"
