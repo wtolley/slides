@@ -2,9 +2,9 @@
 
 <section data-transition="none">
 
-## Coding
+## Hello World Disassembly
 
-```assembly[1-2]
+```assembly[2]
 endbr64
 sub    rsp,0x8
 mov    edx,0x1
@@ -18,33 +18,76 @@ ret
 
 ```
 
-First do `import`s
+What is this instruction doing?
 
 </section>
 
 <section data-transition="none">
 
-## Coding
+## Hello World Disassembly
 
-```python[4-12]
-import dataclasses
-import yaml2pyclass
+```assembly[2]
+endbr64
+sub    rsp,0x8
+mov    edx,0x1
+lea    rsi,[rip+0xea7]        # 2004 <_IO_stdin_used+0x4>
+mov    edi,0x1
+mov    eax,0x0
+call   1050 <__printf_chk@plt>
+mov    eax,0x0
+add    rsp,0x8
+ret
 
-class Config(yaml2pyclass.CodeGenerator):
-    @dataclasses.dataclass
-    class ClusterConfigClass:
-        eps: float
-        min_num_samples: int
-
-    image_size: list
-    cluster_config: ClusterConfigClass
-    path_output: str
 ```
 
-Then follows the rest
+Subtracting 8 from the stack pointer. Why?
 
 </section>
 
+<section data-transition="none">
+
+## Hello World Disassembly
+
+```assembly[2]
+endbr64
+sub    rsp,0x8
+mov    edx,0x1
+lea    rsi,[rip+0xea7]        # 2004 <_IO_stdin_used+0x4>
+mov    edi,0x1
+mov    eax,0x0
+call   1050 <__printf_chk@plt>
+mov    eax,0x0
+add    rsp,0x8
+ret
+
+```
+
+Create room for local variables (can also be used for alignment/padding).
+
+</section>
+
+
+<section data-transition="none">
+
+## Hello World Disassembly
+
+```assembly[3]
+endbr64
+sub    rsp,0x8
+mov    edx,0x1
+lea    rsi,[rip+0xea7]        # 2004 <_IO_stdin_used+0x4>
+mov    edi,0x1
+mov    eax,0x0
+call   1050 <__printf_chk@plt>
+mov    eax,0x0
+add    rsp,0x8
+ret
+
+```
+
+What's going on here?
+
+</section>
 ---
 
 ## Coding large
