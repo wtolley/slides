@@ -1,7 +1,6 @@
 # Basic config, that must be set correctly
-baseurl: /markdownslides
-githuburl: https://github.com/a-nau/markdownslides/
-
+baseurl: /slides
+githuburl: https://wtolley.github.io
 # Further config
 markdown_slide_separator: ---
 permalink: "/:title"
