@@ -2,23 +2,21 @@
 
 <section data-transition="none">
 
-## Hello World Disassembly
-
 ```assembly[1- 2, 8-9]
-0000119d <add>:
-    119d:       55                      push   ebp
-    119e:       89 e5                   mov    ebp,esp
-    11a0:       e8 72 00 00 00          call   1217 <__x86.get_pc_thunk.ax>
-    11a5:       05 33 2e 00 00          add    eax,0x2e33
-    11aa:       8b 55 08                mov    edx,DWORD PTR [ebp+0x8]
-    11ad:       8b 45 0c                mov    eax,DWORD PTR [ebp+0xc]
-    11b0:       01 d0                   add    eax,edx
-    11b2:       5d                      pop    ebp
-    11b3:       c3                      ret
+
+push   ebp
+mov    ebp,esp
+call   1217 <__x86.get_pc_thunk.ax>
+add    eax,0x2e33
+mov    edx,DWORD PTR [ebp+0x8]
+mov    eax,DWORD PTR [ebp+0xc]
+add    eax,edx
+pop    ebp
+ret
 
 ```
 
-What is this instruction doing?
+
 
 </section>
 
